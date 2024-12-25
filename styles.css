@@ -1,0 +1,207 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #030303; /* Darkest background */
+    color: #c7c7c7; /* Lighter text for contrast */
+    height: 100vh;
+    overflow: hidden;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.container {
+    display: flex;
+    height: 100%;
+}
+
+.sidebar {
+    width: 220px;
+    background-color: #000000; /* Darkest sidebar */
+    color: #c7c7c7;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    overflow-y: auto;
+    position: relative;
+    z-index: 1;
+    height: 100%; /* Ensures sidebar takes full height */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Pushes the social icons to the bottom */
+}
+
+.profile-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.profile-picture {
+    width: 100px;
+    height: 100px;
+    background-color: #222; /* Darker picture background */
+    border-radius: 50%;
+    background-size: cover;
+    background-position: center;
+    cursor: pointer;
+}
+
+.profile-name {
+    margin-top: 10px;
+    font-size: 18px;
+    text-align: center;
+    color: #c7c7c7; /* Light text color */
+}
+
+.menu {
+    list-style: none;
+    width: 100%;
+}
+
+.menu li {
+    width: 100%;
+    padding: 12px;
+    text-align: center;
+    cursor: pointer;
+    transition: background 0.3s;
+    background-color: #111; /* Darker background for menu items */
+    border-radius: 20px; /* Aumente o valor do border-radius para deixar os cantos mais arredondados */
+    margin-bottom: 8px; /* Diminuir a margem entre os itens do menu */
+}
+
+.menu li:hover {
+    background-color: #222; /* Lighter hover effect */
+}
+
+/* Redes sociais */
+.social {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.social a {
+    margin: 5px 0;
+    display: inline-block;
+}
+
+.social img {
+    width: 80px; /* Reduzindo o tamanho dos ícones */
+    height: auto; /* Ajuste automático da altura para manter a proporção */
+    max-height: 25px; /* Limita a altura máxima para garantir consistência */
+    object-fit: contain; /* Garante que a imagem seja redimensionada sem distorção */
+}
+
+/* Restante do código CSS permanece o mesmo */
+
+.main-content {
+    flex: 1;
+    background-color: #101011; /* Darker background for main content */
+    padding: 20px;
+    overflow-y: auto;
+}
+
+.stats {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+
+.stat-box {
+    background-color: #222; /* Darker background for stat boxes */
+    padding: 20px;
+    text-align: center;
+    width: 100px;
+    border-radius: 8px;
+}
+
+.stat-label {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #c7c7c7;
+}
+
+.stat-value {
+    font-size: 24px;
+    color: #f0f0f0; /* Lighter text for stats */
+}
+
+.about-section {
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    color: #e0e0e0; /* Light text for the about section */
+    height: 300px;
+    overflow: hidden;
+    background-color: #040404; /* Almost black background */
+    background-blur: 5px;
+}
+
+.about-section h2 {
+    position: relative;
+    z-index: 1;
+}
+
+.about-section p {
+    position: relative;
+    z-index: 1;
+}
+
+.latest, .videos-section {
+    background-color: #181818; /* Even darker background for sections */
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.latest-grid, .video-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+}
+
+.video-box {
+    background-color: #222; /* Darker background for video boxes */
+    width: calc(33.333% - 20px);
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+}
+
+.thumbnail {
+    width: 100%;
+    height: 100px;
+    background-color: #444; /* Darker background for thumbnails */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+    background-size: cover;
+    background-position: center;
+}
+
+.video-title {
+    font-size: 18px;
+    text-align: center;
+    color: #f0f0f0; /* Lighter text for video titles */
+}
